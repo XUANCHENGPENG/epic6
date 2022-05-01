@@ -6,17 +6,9 @@ export default function Home() {
     return (
         <div className='home-container'>
             <div className='home-header'>
-                <h1 className='home-heading'>YogaIntelliJ</h1>
-                <Link to='/about'>
-                    <button 
-                        className="btn btn-secondary" 
-                        id="about-btn"
-                    >
-                        About
-                    </button>
-                </Link>
+                <h1 className='home-heading'>Pride Melbsports</h1>
             </div>
-            <h1 className="description">Yoga Helper</h1>
+            <h1 className="description">Yoga Trainer</h1>
             <div className="btn-section">
                     <Link to='/start'>
                         <button
@@ -28,6 +20,11 @@ export default function Home() {
                             className="btn start-btn"
                         >Help</button>
                     </Link>
+            </div>
+            <div className="about-main">
+                <p className="about-content">
+                This project is based on the work of Harsh: an AI-based Yoga Trainer on Github, which can be accessed by <a href="https://github.com/harshbhatt7585/YogaIntelliJ">https://github.com/harshbhatt7585/YogaIntelliJ</a>
+                </p>
             </div>
         </div>
     )
