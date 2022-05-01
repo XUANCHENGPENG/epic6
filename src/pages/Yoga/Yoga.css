@@ -1,0 +1,13 @@
+.secondary-btn {
+    position: absolute;
+    width: 24vw;
+    height: 3vw;
+    left: 37vw;
+    bottom: 3vw;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border-color: rgba(125, 125, 125, 0.1);
+    border-width: 5px;
+    background-color: rgba(0, 0, 0,0.2);
+    color: white;
+  }

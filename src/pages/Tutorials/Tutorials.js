@@ -29,6 +29,7 @@ export default function Tutorials() {
                     <p className="tutorials-content">{points}</p>
                 ))}
             </div>
+            
         </div>
     )
 }

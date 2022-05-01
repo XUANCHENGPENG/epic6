@@ -1,37 +1,31 @@
-import React from 'react'
-
-import { poseImages } from '../../utils/yoga_images'
-
+import React,{useState}  from 'react'
+import { poseInstructions } from '../../utils/data'
+import { poseImages } from '../../utils/pose_images'
 import './DropDown.css'
 
-export default function DropDown({ poseList, currentPose, setCurrentPose }) {
+export default function DropDown({poseList, currentPose, setCurrentPose}) {
+const [instructions, setInsntructions] = useState(poseInstructions)
 return (
-    <div className='dropdown dropdown-container'>
-        <button 
-            className="btn btn-secondary dropdown-toggle"
-            type='button'
-            data-bs-toggle="dropdown"
-            id="pose-dropdown-btn"
-            aria-expanded="false"
-        >{currentPose}
-        </button>
-        <ul class="dropdown-menu dropdown-custom-menu" aria-labelledby="dropdownMenuButton1">
-            {poseList.map((pose) => (
-                <li onClick={() => setCurrentPose(pose)}>
-                    <div class="dropdown-item-container">
-                        <p className="dropdown-item-1">{pose}</p>
-                        <img 
-                            src={poseImages[pose]}
-                            className="dropdown-img"
-                        />
-                        
-                    </div>
-                </li>
-            ))}
-            
-        </ul>
-              
-          
-      </div>
+        <div className='dropdown dropdown-container'>
+            <ul id = 'nav'>
+                {poseList.map((pose) => (
+                    <li onClick={() => setCurrentPose(pose)}>
+                        <p>{pose}</p>
+                        <img src={poseImages[pose]} className="dropdown-img"/>
+                    </li>
+                ))}
+            </ul>
+            <ul className="instructions-list">
+                <h1 style={{ color: 'white' }}> Selected Pose {currentPose} </h1>
+                {instructions[currentPose].map((instruction) => {
+                    return(
+                        <li className="instruction">{instruction}</li>
+                    )
+                })}
+            </ul>
+                <img className="pose-demo-img" src={poseImages[currentPose]}/>
+        </div>
+        
     )
 }
+ 
