@@ -10,7 +10,7 @@ return (
             <ul id = 'nav'>
                 {poseList.map((pose) => (
                     <li onClick={() => setCurrentPose(pose)}>
-                        <p>{pose}</p>
+                        <p style={{ color: 'white' }}>{pose}</p>
                         <img src={poseImages[pose]} className="dropdown-img"/>
                     </li>
                 ))}
