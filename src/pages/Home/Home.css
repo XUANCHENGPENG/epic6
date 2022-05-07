@@ -99,6 +99,11 @@ body::-webkit-scrollbar {
     font-size: 12px;
 }
 
+.bottom-content {
+    color: white;
+    font-size: 20px;
+    text-align: center
+}
 .about-content a{
     color: white;  
    }

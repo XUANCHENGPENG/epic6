@@ -21,10 +21,10 @@ export default function Home() {
                         >Help</button>
                     </Link>
             </div>
-            <div className="about-main">
-                <p className="about-content">
-                This project is based on the work of Harsh: an AI-based Yoga Trainer on Github, which can be accessed by <a href="https://github.com/harshbhatt7585/YogaIntelliJ">https://github.com/harshbhatt7585/YogaIntelliJ</a>
-                </p>
+            <div className='home-bottom'>
+                <h4 className="bottom-content">
+                    This project is based on the work of Harsh: an AI-based Yoga Trainer on Github, which can be accessed by <a href="https://github.com/harshbhatt7585/YogaIntelliJ">https://github.com/harshbhatt7585/YogaIntelliJ</a>
+                </h4>
             </div>
         </div>
     )
