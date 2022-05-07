@@ -233,7 +233,7 @@ function Yoga(){
     return(
         <div className="home-container">
             <div className='home-header'>
-                <h1 className='home-heading'>Pride Melbsports</h1>
+                <h1 className='home-heading'>Yoga Trainer</h1>
                 <button onClick={startYoga} className="btn start-btn">Start Pose</button>
                 <Link to='/'>
                     <button 
@@ -247,6 +247,9 @@ function Yoga(){
                 poseList={poseList} 
                 currentPose={currentPose} 
                 setCurrentPose={setCurrentPose}/>
+            <div className='home-bottom'>
+                <h1 className='home-heading'>Pride Melbsports</h1>
+            </div>
         </div>
     )
 }

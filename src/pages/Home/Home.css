@@ -2,11 +2,20 @@
 .home-header {
     background: linear-gradient(100deg,#37BEB0, #DBF5F0);
     width: 100vw;
-    height: 70px;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.home-bottom {
+    background: linear-gradient(100deg,#37BEB0, #DBF5F0);
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+}
+
 .home-container {
     height: 100vh;    
     background: #0C6170
