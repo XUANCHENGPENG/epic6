@@ -15,8 +15,8 @@
 .performance-container {
   display: flex;
   padding: 20px;
-  position: absolute;
-  left: 760px;
+  position: relative;
+  left: 20%;
 }
 
 .pose-performance {
@@ -42,4 +42,21 @@
   top: 200px;
   width: 500px;
   aspect-ratio: 1;
+}
+
+
+#start-btn {
+  padding: 5px 10px;
+  color: #37BEB0;
+}
+#start-btn:hover {
+  border-color: white;
+  background-color: white;
+  color: #0C6170;
+}
+#start-btn:focus {
+  box-shadow: none;
+  background: white;
+  border-color: white;
+  color: #0C6170;
 }

@@ -11,7 +11,7 @@ import { POINTS, keypointConnections } from '../../utils/data';
 import { drawPoint, drawSegment } from '../../utils/helper'
 
 let skeletonColor = 'rgb(255,255,255)'
-let poseList = ['Tree', 'Chair', 'Cobra', 'Warrior', 'Dog']
+let poseList = ['Chair', 'Cobra', 'Dog','Tree','Warrior']
   
 let interval
 let flag = false
@@ -55,11 +55,8 @@ function Yoga(){
         Chair: 0,
         Cobra: 1,
         Dog: 2,
-        No_Pose: 3,
-        Shoulderstand: 4,
-        Traingle: 5,
-        Tree: 6,
-        Warrior: 7,}
+        Tree: 3,
+        Warrior: 4,}
 
     function get_center_point(landmarks, left_bodypart, right_bodypart) {
         let left = tf.gather(landmarks, left_bodypart, 1)
@@ -110,7 +107,7 @@ function Yoga(){
     const runMovenet = async () => {
         const detectorConfig = {modelType: poseDetection.movenet.modelType.SINGLEPOSE_THUNDER};
         const detector = await poseDetection.createDetector(poseDetection.SupportedModels.MoveNet, detectorConfig);
-        const poseClassifier = await tf.loadLayersModel('https://models.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
+        const poseClassifier = await tf.loadLayersModel('https://epic1.s3.ap-southeast-2.amazonaws.com/model.json')
         const countAudio = new Audio(count)
         countAudio.loop = true
         interval = setInterval(() => { 
@@ -193,6 +190,14 @@ function Yoga(){
             <div className="home-container">
                 <div className='home-header'>
                     <h1 className='home-heading'>Pride Melbsports</h1>
+                    <button onClick={stopPose} className="btn start-btn">Stop Pose</button>
+                    <Link to='/'>
+                    <button 
+                        className="btn btn-secondary" 
+                        id="about-btn">
+                        Home
+                    </button>
+                </Link>
                 </div>
                 <div className="performance-container">
                     <div className="pose-performance">
@@ -205,14 +210,14 @@ function Yoga(){
                 <div>
                     <Webcam width='640px' height='480px' id="webcam"
                         ref={webcamRef}
-                        style={{ position: 'absolute',
-                                left: 120,
+                        style={{position: 'absolute',
+                                left: 100,
                                 top: 200,
                                 padding: '0px',}}/>
                     <canvas ref={canvasRef} id="my-canvas" width='640px'
                             height='480px'
-                            style={{ position: 'absolute',
-                                    left: 120,
+                            style={{position: 'absolute',
+                                    left: 100,
                                     top: 200,
                                     zIndex: 1}}>
                     </canvas>
@@ -220,7 +225,6 @@ function Yoga(){
                         <img src={poseImages[currentPose]} className="pose-img"/>
                     </div>
                 </div>
-                <button onClick={stopPose} className="secondary-btn">Stop Pose</button>
             </div>
             )
     }
@@ -230,6 +234,7 @@ function Yoga(){
         <div className="home-container">
             <div className='home-header'>
                 <h1 className='home-heading'>Pride Melbsports</h1>
+                <button onClick={startYoga} className="btn start-btn">Start Pose</button>
                 <Link to='/'>
                     <button 
                         className="btn btn-secondary" 
@@ -242,7 +247,6 @@ function Yoga(){
                 poseList={poseList} 
                 currentPose={currentPose} 
                 setCurrentPose={setCurrentPose}/>
-            <button onClick={startYoga} className="secondary-btn">Start Pose</button>
         </div>
     )
 }
