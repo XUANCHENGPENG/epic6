@@ -39,8 +39,9 @@
 .pose-img {
   position: absolute;
   right: 120px;
-  top: 300px;
-  width: 500px;
+  top: 250px;
+  width: 450px;
+  height:450px;
   aspect-ratio: 1;
 }
 

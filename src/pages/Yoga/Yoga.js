@@ -208,21 +208,24 @@ function Yoga(){
                     </div>
                 </div>
                 <div>
-                    <Webcam width='640px' height='480px' id="webcam"
+                    <Webcam width='600px' height='450px' id="webcam"
                         ref={webcamRef}
                         style={{position: 'absolute',
                                 left: 120,
-                                top: 200,
+                                top: 250,
                                 padding: '0px',}}/>
-                    <canvas ref={canvasRef} id="my-canvas" width='640px'
-                            height='480px'
+                    <canvas ref={canvasRef} id="my-canvas" width='600px'
+                            height='450px'
                             style={{position: 'absolute',
                                     left: 120,
-                                    top: 200,
+                                    top: 250,
                                     zIndex: 1}}>
                     </canvas>
                     <div>
                         <img src={poseImages[currentPose]} className="pose-img"/>
+                    </div>
+                    <div className='home-bottom'>
+                        <h1 className='home-heading'>Pride Melbsports</h1>
                     </div>
                 </div>
             </div>
