@@ -210,15 +210,15 @@ function Yoga(){
                 <div>
                     <Webcam width='640px' height='480px' id="webcam"
                         ref={webcamRef}
-                        style={{position: 'absolute',
+                        style={{position: 'relative',
                                 left: 100,
-                                top: 200,
+                                top: 20,
                                 padding: '0px',}}/>
                     <canvas ref={canvasRef} id="my-canvas" width='640px'
                             height='480px'
-                            style={{position: 'absolute',
+                            style={{position: 'relative',
                                     left: 100,
-                                    top: 200,
+                                    top: 20,
                                     zIndex: 1}}>
                     </canvas>
                     <div>
