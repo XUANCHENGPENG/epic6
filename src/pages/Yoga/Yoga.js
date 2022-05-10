@@ -225,7 +225,7 @@ function Yoga(){
                         <img src={poseImages[currentPose]} className="pose-img"/>
                     </div>
                     <div className='home-bottom'>
-                        <h1 className='home-heading'>Pride Melbsports</h1>
+                        <h1 className='home-heading'>It may take 15 seconds for pose estimation work.</h1>
                     </div>
                 </div>
             </div>
