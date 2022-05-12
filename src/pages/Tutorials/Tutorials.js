@@ -8,7 +8,7 @@ export default function Tutorials() {
     return (        
         <div className="home-container">
             <div className='home-header'>
-                <h1 className='home-heading'>Pride Melbsports</h1>
+                <h1 className='home-heading'>Tutorials</h1>
                 <Link to='/'>
                     <button 
                         className="btn btn-secondary" 
@@ -29,7 +29,9 @@ export default function Tutorials() {
                     <p className="tutorials-content">{points}</p>
                 ))}
             </div>
-            
+            <div className='home-bottom'>
+                <h1 className='home-heading'>Pride Melbsports</h1>
+            </div>
         </div>
     )
 }

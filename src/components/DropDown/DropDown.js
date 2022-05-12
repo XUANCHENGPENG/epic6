@@ -23,7 +23,6 @@ export default function DropDown({poseList, currentPose, setCurrentPose}) {
                             <li className="instruction">{instruction}</li>
                         )
                     })}
-                    <p><a href="https://classpass.com/">from Classpass</a></p>
                 </ul>
 
 
